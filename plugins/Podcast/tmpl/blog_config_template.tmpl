@@ -1,0 +1,118 @@
+<p>The following settings determine how your podcast will be listed from within the iTunes Music Store.</p>
+
+<mtapp:setting
+    id="itunes-author"
+    label="<__trans phrase="iTunes Artist">"
+    hint="<__trans phrase="The name of the podcast artist(s).">"
+    show_hint="1">
+    <input type="text" name="itunes-author" id="itunes-author" value="<mt:var name="itunes-author">" class="full-width" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="itunes-subtitle"
+    label="<__trans phrase="iTunes Subtitle">"
+    hint="<__trans phrase="A terse phrase describing the podcast.">"
+    show_hint="1">
+    <input type="text" name="itunes-subtitle" id="itunes-subtitle" value="<mt:var name="itunes-subtitle">" class="full-width" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="itunes-summary"
+    label="<__trans phrase="iTunes Summary">"
+    hint="<__trans phrase="A more detailed description of the podcast.">"
+    show_hint="1">
+    <textarea name="itunes-summary" id="itunes-summary" class="full-width"><mt:var name="itunes-summary"></textarea>
+</mtapp:setting>
+
+<mtapp:setting
+    id="itunes-owner-name"
+    label="<__trans phrase="iTunes Owner Name">"
+    hint="<__trans phrase="The contact name for this podcast.">"
+    show_hint="1">
+    <input type="text" name="itunes-owner-name" id="itunes-owner-name" value="<mt:var name="itunes-owner-name">" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="itunes-owner-email"
+    label="<__trans phrase="iTunes Owner Email">"
+    hint="<__trans phrase="The contact email for this podcast.">"
+    show_hint="1">
+    <input type="text" name="itunes-owner-email" id="itunes-owner-email" value="<mt:var name="itunes-owner-email">" />
+</mtapp:setting>
+
+<mtapp:setting
+    id="itunes-category"
+    label="<__trans phrase="iTunes Categories">"
+    show_hint="1">
+    <select name="itunes-category" multiple="10" id="itunes-category" class="full-width">
+      <option <mt:HasiTunesCategory category="Arts">selected</mt:HasiTunesCategory>>Arts</option>
+      <option <mt:HasiTunesCategory category="Arts > Design">selected</mt:HasiTunesCategory>>Arts &gt; Design</option>
+      <option <mt:HasiTunesCategory category="Arts > Fashion & Beauty">selected</mt:HasiTunesCategory>>Arts &gt; Fashion & Beauty</option>
+      <option <mt:HasiTunesCategory category="Arts > Food">selected</mt:HasiTunesCategory>>Arts &gt; Food</option>
+      <option <mt:HasiTunesCategory category="Arts > Literature">selected</mt:HasiTunesCategory>>Arts &gt; Literature</option>
+      <option <mt:HasiTunesCategory category="Arts > Performing Arts">selected</mt:HasiTunesCategory>>Arts &gt; Performing Arts</option>
+      <option <mt:HasiTunesCategory category="Arts > Visual Arts">selected</mt:HasiTunesCategory>>Arts &gt; Visual Arts</option>
+      <option <mt:HasiTunesCategory category="Business">selected</mt:HasiTunesCategory>>Business</option>
+      <option <mt:HasiTunesCategory category="Business > Business News">selected</mt:HasiTunesCategory>>Business &gt; Business News</option>
+      <option <mt:HasiTunesCategory category="Business > Careers">selected</mt:HasiTunesCategory>>Business &gt; Careers</option>
+      <option <mt:HasiTunesCategory category="Business > Investing">selected</mt:HasiTunesCategory>>Business &gt; Investing</option>
+      <option <mt:HasiTunesCategory category="Business > Management & Marketing">selected</mt:HasiTunesCategory>>Business &gt; Management & Marketing</option>
+      <option <mt:HasiTunesCategory category="Business > Shopping">selected</mt:HasiTunesCategory>>Business &gt; Shopping</option>
+      <option <mt:HasiTunesCategory category="Comedy">selected</mt:HasiTunesCategory>>Comedy</option>
+      <option <mt:HasiTunesCategory category="Education">selected</mt:HasiTunesCategory>>Education</option>
+      <option <mt:HasiTunesCategory category="Education > Education Technology">selected</mt:HasiTunesCategory>>Education &gt; Education Technology</option>
+      <option <mt:HasiTunesCategory category="Education > Higher Education">selected</mt:HasiTunesCategory>>Education &gt; Higher Education</option>
+      <option <mt:HasiTunesCategory category="Education > K-12">selected</mt:HasiTunesCategory>>Education &gt; K-12</option>
+      <option <mt:HasiTunesCategory category="Education > Language Courses">selected</mt:HasiTunesCategory>>Education &gt; Language Courses</option>
+      <option <mt:HasiTunesCategory category="Education > Training">selected</mt:HasiTunesCategory>>Education &gt; Training</option>
+      <option <mt:HasiTunesCategory category="Games & Hobbies">selected</mt:HasiTunesCategory>>Games & Hobbies</option>
+      <option <mt:HasiTunesCategory category="Games & Hobbies > Automotive">selected</mt:HasiTunesCategory>>Games &amp; Hobbies &gt; Automotive</option>
+      <option <mt:HasiTunesCategory category="Games & Hobbies > Aviation">selected</mt:HasiTunesCategory>>Games &amp; Hobbies &gt; Aviation</option>
+      <option <mt:HasiTunesCategory category="Games & Hobbies > Hobbies">selected</mt:HasiTunesCategory>>Games &amp; Hobbies &gt; Hobbies</option>
+      <option <mt:HasiTunesCategory category="Games & Hobbies > Other Games">selected</mt:HasiTunesCategory>>Games &amp; Hobbies &gt; Other Games</option>
+      <option <mt:HasiTunesCategory category="Games & Hobbies > Video Games">selected</mt:HasiTunesCategory>>Games &amp; Hobbies &gt; Video Games</option>
+      <option <mt:HasiTunesCategory category="Government & Organizations">selected</mt:HasiTunesCategory>>Government & Organizations</option>
+      <option <mt:HasiTunesCategory category="Government & Organizations > Local">selected</mt:HasiTunesCategory>>Government &amp; Organizations &gt; Local</option>
+      <option <mt:HasiTunesCategory category="Government & Organizations > National">selected</mt:HasiTunesCategory>>Government &amp; Organizations &gt; National</option>
+      <option <mt:HasiTunesCategory category="Government & Organizations > Non-Profit">selected</mt:HasiTunesCategory>>Government &amp; Organizations &gt; Non-Profit</option>
+      <option <mt:HasiTunesCategory category="Government & Organizations > Regional">selected</mt:HasiTunesCategory>>Government &amp; Organizations &gt; Regional</option>
+      <option <mt:HasiTunesCategory category="Health">selected</mt:HasiTunesCategory>>Health</option>
+      <option <mt:HasiTunesCategory category="Health > Alternative Health">selected</mt:HasiTunesCategory>>Health &gt; Alternative Health</option>
+      <option <mt:HasiTunesCategory category="Health > Fitness & Nutrition">selected</mt:HasiTunesCategory>>Health &gt; Fitness & Nutrition</option>
+      <option <mt:HasiTunesCategory category="Health > Self-Help">selected</mt:HasiTunesCategory>>Health &gt; Self-Help</option>
+      <option <mt:HasiTunesCategory category="Health > Sexuality">selected</mt:HasiTunesCategory>>Health &gt; Sexuality</option>
+      <option <mt:HasiTunesCategory category="Kids & Family">selected</mt:HasiTunesCategory>>Kids & Family</option>
+      <option <mt:HasiTunesCategory category="Music">selected</mt:HasiTunesCategory>>Music</option>
+      <option <mt:HasiTunesCategory category="News & Politics">selected</mt:HasiTunesCategory>>News & Politics</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality">selected</mt:HasiTunesCategory>>Religion & Spirituality</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality > Buddhism">selected</mt:HasiTunesCategory>>Religion &amp; Spirituality &gt; Buddhism</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality > Christianity">selected</mt:HasiTunesCategory>>Religion &amp; Spirituality &gt; Christianity</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality > Hinduism">selected</mt:HasiTunesCategory>>Religion &amp; Spirituality &gt; Hinduism</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality > Islam">selected</mt:HasiTunesCategory>>Religion &amp; Spirituality &gt; Islam</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality > Judaism">selected</mt:HasiTunesCategory>>Religion &amp; Spirituality &gt; Judaism</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality > Other">selected</mt:HasiTunesCategory>>Religion &amp; Spirituality &gt; Other</option>
+      <option <mt:HasiTunesCategory category="Religion & Spirituality > Spirituality">selected</mt:HasiTunesCategory>>Religion &amp; Spirituality &gt; Spirituality</option>
+      <option <mt:HasiTunesCategory category="Science & Medicine">selected</mt:HasiTunesCategory>>Science & Medicine</option>
+      <option <mt:HasiTunesCategory category="Science & Medicine > Medicine">selected</mt:HasiTunesCategory>>Science &amp; Medicine &gt; Medicine</option>
+      <option <mt:HasiTunesCategory category="Science & Medicine > Natural Sciences">selected</mt:HasiTunesCategory>>Science &amp; Medicine &gt; Natural Sciences</option>
+      <option <mt:HasiTunesCategory category="Science & Medicine > Social Sciences">selected</mt:HasiTunesCategory>>Science &amp; Medicine &gt; Social Sciences</option>
+      <option <mt:HasiTunesCategory category="Society & Culture">selected</mt:HasiTunesCategory>>Society & Culture</option>
+      <option <mt:HasiTunesCategory category="Society & Culture > History">selected</mt:HasiTunesCategory>>Society &amp; Culture &gt; History</option>
+      <option <mt:HasiTunesCategory category="Society & Culture > Personal Journals">selected</mt:HasiTunesCategory>>Society &amp; Culture &gt; Personal Journals</option>
+      <option <mt:HasiTunesCategory category="Society & Culture > Philosophy">selected</mt:HasiTunesCategory>>Society &amp; Culture &gt; Philosophy</option>
+      <option <mt:HasiTunesCategory category="Society & Culture > Places & Travel">selected</mt:HasiTunesCategory>>Society &amp; Culture &gt; Places & Travel</option>
+      <option <mt:HasiTunesCategory category="Sports & Recreation">selected</mt:HasiTunesCategory>>Sports & Recreation</option>
+      <option <mt:HasiTunesCategory category="Sports & Recreation > Amateur">selected</mt:HasiTunesCategory>>Sports &amp; Recreation &gt; Amateur</option>
+      <option <mt:HasiTunesCategory category="Sports & Recreation > College & High School">selected</mt:HasiTunesCategory>>Sports &amp; Recreation &gt; College & High School</option>
+      <option <mt:HasiTunesCategory category="Sports & Recreation > Outdoor">selected</mt:HasiTunesCategory>>Sports &amp; Recreation &gt; Outdoor</option>
+      <option <mt:HasiTunesCategory category="Sports & Recreation > Professional">selected</mt:HasiTunesCategory>>Sports &amp; Recreation &gt; Professional</option>
+      <option <mt:HasiTunesCategory category="Technology">selected</mt:HasiTunesCategory>>Technology</option>
+      <option <mt:HasiTunesCategory category="Technology > Gadgets">selected</mt:HasiTunesCategory>>Technology &gt; Gadgets</option>
+      <option <mt:HasiTunesCategory category="Technology > Tech News">selected</mt:HasiTunesCategory>>Technology &gt; Tech News</option>
+      <option <mt:HasiTunesCategory category="Technology > Podcasting">selected</mt:HasiTunesCategory>>Technology &gt; Podcasting</option>
+      <option <mt:HasiTunesCategory category="Technology > Software How-To">selected</mt:HasiTunesCategory>>Technology &gt; Software How-To</option>
+      <option <mt:HasiTunesCategory category="TV & Film">selected</mt:HasiTunesCategory>>TV & Film</option>
+    </select>
+</mtapp:setting>
+
+

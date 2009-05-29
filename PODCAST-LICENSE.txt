@@ -1,0 +1,7 @@
+The Podcast Plugin for Movable Type is property of Six Apart, Ltd.
+
+It is available under the same terms as your Movable Type license:
+
+* free for personal use, or
+* available for commercial use in accordance with the license 
+  acquired from Six Apart

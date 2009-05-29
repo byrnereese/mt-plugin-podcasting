@@ -1,0 +1,14 @@
+#asset_details #file_desc-field .field-content .textarea-wrapper textarea {
+height: 20px;
+}
+
+#asset_details #file_name-field {
+float:left;
+width: 400px;
+margin-right: 10px;
+}
+#asset_details #duration-field {
+float:left;
+width: 198px;
+clear: right;
+}

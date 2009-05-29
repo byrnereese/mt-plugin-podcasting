@@ -1,0 +1,94 @@
+<mt:setvarblock name="page_title"><__trans phrase="Add Podcast Asset"></mt:setvarblock>
+<mt:setvarblock name="html_head" append="1">
+    <script type="text/javascript" src="<mt:var name="static_uri">js/tc/client.js"></script>
+    <script type="text/javascript" src="<mt:var name="static_uri">js/tc/json.js"></script>
+    <script type="text/javascript" src="<mt:var name="static_uri">js/dialog.js"></script>
+    <script type="text/javascript" src="<mt:var name="static_uri">js/assetdetail.js"></script>
+    <script type="text/javascript">
+    <!--
+    function dialogClose(data) {
+        if (!data) {
+            closeDialog();
+            return;
+        }
+        f.submit();
+    }
+
+    function viewChange(ds, fn) {
+        checkOpened();
+        if (fn) fn(ds);
+    }
+
+    var tableSelect;
+    var dlg;
+    function init() {
+        dlg = new Dialog.Simple("find-podcast-dialog");
+        var panel = new ListingPanel("asset");
+        dlg.panel = panel;
+
+        // hook into view updates so we can close any opened detail panel
+        var old_update = panel.datasource.onUpdate;
+        panel.datasource.onUpdate = function(ds) { viewChange(ds, old_update) };
+
+        panel.pager.setState(<mt:var name="pager_json">);
+        panel.parent = dlg;
+        dlg.open({}, dialogClose);
+    }
+//    TC.attachLoadEvent( init );
+    // -->
+    </script>
+</mt:setvarblock>
+<mt:include name="dialog/header.tmpl">
+
+<div id="find-podcast-dialog">
+
+<form method="get" action="<mt:var name="script_url">">
+    <input type="hidden" name="__mode" value="podcast_asset_options" />
+    <input type="hidden" name="blog_id" value="<mt:var name="blog_id">" />
+    <input type="hidden" name="magic_token" value="<mt:var name="magic_token">" />
+    <input type="hidden" name="podcast_url" value="<mt:var name="podcast_url">" />
+    <p>The podcast you are trying to add is a protected resource and requires authentication. Please enter in the username and password below to continue.</p>
+<mt:if name="auth_failed">
+        <mtapp:statusmsg
+            id="auth_required"
+            class="error">
+            <__trans phrase="Authentication failed. Please try again.">
+        </mtapp:statusmsg>
+</mt:if>
+    <mtapp:setting
+        id="username"
+        label_class="top-label"
+        label="<__trans phrase="Username">"
+        show_hint="0">
+      <input name="username" type="text" size="30" />
+    </mtapp:setting>
+    <mtapp:setting
+        id="password"
+        label_class="top-label"
+        label="<__trans phrase="Password">"
+        show_hint="0">
+      <input name="password" type="password" size="30" />
+    </mtapp:setting>
+
+    <div class="actions-bar">
+        <div class="actions-bar-inner pkg actions">
+            <button
+                type="submit"
+                accesskey="s"
+                title="<mt:if name="is_image"><__trans phrase="Continue (c)"><mt:else><__trans phrase="Continue (c)"></mt:if>"
+                class="primary-button close disabled-button"
+                ><__trans phrase="Continue"></button>
+            <button
+                onclick="closeDialog(); return false"
+                type="submit"
+                accesskey="x"
+                class="cancel"
+                title="<__trans phrase="Cancel (x)">"
+                ><__trans phrase="Cancel"></button>
+        </div>
+    </div>
+
+</form>
+</div>
+
+<mt:include name="dialog/footer.tmpl">

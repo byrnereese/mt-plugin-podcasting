@@ -1,0 +1,56 @@
+name: Podcasting Plugin
+id: Podcast
+key: Podcast
+author_link: http://www.majordojo.com/
+author_name: Byrne Reese
+description: A plugin for Movable Type that introduces a generic podcast asset type that helps to encode and reference externally located podcasts and media files.
+schema_version: 5
+version: 1.16
+plugin_link: http://www.majordojo.com/projects/podcast.php
+
+settings:
+    itunes-subtitle:
+        Scope: blog
+    itunes-author:
+        Scope: blog
+    itunes-summary:
+        Scope: blog
+    itunes-owner-name:
+        Scope: blog
+    itunes-owner-email:
+        Scope: blog
+    itunes-category:
+        Scope: blog
+
+blog_config_template: blog_config_template.tmpl
+
+callbacks:
+    MT::App::CMS::template_source.asset_options: $Podcast::Podcast::Plugin::dialog_mod
+
+tags:
+    function: 
+        iTunesArtist: $Podcast::Podcast::Plugin::_hdlr_iTunesArtist
+        iTunesSubtitle: $Podcast::Podcast::Plugin::_hdlr_iTunesSubtitle
+        iTunesSummary: $Podcast::Podcast::Plugin::_hdlr_iTunesSummary
+        iTunesOwnerName: $Podcast::Podcast::Plugin::_hdlr_iTunesOwnerName
+        iTunesOwnerEmail: $Podcast::Podcast::Plugin::_hdlr_iTunesOwnerEmail
+        iTunesCategoryName: $Podcast::Podcast::Plugin::_hdlr_iTunesCategoryName
+    block:
+        HasiTunesCategory?: $Podcast::Podcast::Plugin::_hdlr_HasiTunesCategory
+        iTunesCategories: $Podcast::Podcast::Plugin::_hdlr_iTunesCategories
+
+applications:
+    cms:
+        methods:
+            podcast_find: $Podcast::Podcast::CMS::find
+            podcast_asset_options: $Podcast::Podcast::CMS::asset_options
+        menus:
+            create:podcast:
+                label: Podcast Asset
+                order: 304
+                dialog: podcast_find
+                view: blog
+
+object_types:
+    asset.podcast: MT::Asset::Podcast
+

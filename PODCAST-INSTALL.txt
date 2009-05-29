@@ -1,0 +1,66 @@
+#
+# Installation instructions for Podcast 1.0
+#
+
+Thank you for downloading the Podcast Plugin for Movable Type. Below 
+are the manual install instructions this plugin.
+
+Before we proceed, make sure each of the following prerequisites have
+been satisfied.
+
+PREREQUISITES
+
+  * User has MovableType 4.01 or greater installed
+  * User has LWP installed
+
+INSTALLATION
+
+1) Install the plugin's files.
+
+   To install this plugin, unpack the plugin's archive. Then
+   copy the contents of Podcast's mt-static directory into 
+   Movable Type's mt-static directory:
+
+   > cp -pR Podcast-1.0/mt-static/* /path/to/mt/mt-static/
+
+   Then copy the contents of Podcast's plugins folder to 
+   Movable Type's plugins folder:
+
+   > cp -pR Podcast-1.0/plugins/* /path/to/mt/plugins/
+
+   In the event that you are unable to unpack the plugin's archive
+   directly on the server, you may need to install the files manually.
+   To do this, each of plugin's files needs to be placed in a
+   specific directory, as outlined below:
+
+     plugins/Podcast/lib/Podcast/*  
+           ==> $MTHOME/plugins/Podcast/lib/Podcast/
+     plugins/Podcast/tmpl/*              
+           ==> $MTHOME/plugins/Podcast/tmpl/
+     plugins/Podcast/Podcast.pl     
+           ==> $MTHOME/plugins/Podcast/Podcast.pl
+
+     The following files are static files and must be placed in your static
+     web path. By default this is $MTHOME/mt-static.
+
+     mt-static/plugins/Podcast/*
+           ==> $MTHOME/mt-static/plugins/Podcast/
+
+2) Set Your StaticWebPath.
+
+   Podcast makes use of a freely available flash file to stream MP3 files
+   from your blog. This must be accessible via a web browser.
+
+   To change your static web path, open up your mt-config.cgi file and look 
+   for the following lines:
+
+     # If you place all of your MT files in a cgi-bin directory, you
+     # will need to place the directory containing your static files
+     # (mt-static) elsewhere, so that the webserver will not try to execute
+     # them.  StaticWebPath is the path to your mt-static directory.
+     #
+     # StaticWebPath http://www.example.com/mt-static
+
+   Set the value of StaticWebPath to the fully qualified URL of your
+   mt-static directory.
+
