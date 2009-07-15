@@ -5,7 +5,7 @@ author_link: http://www.majordojo.com/
 author_name: Byrne Reese
 description: A plugin for Movable Type that introduces a generic podcast asset type that helps to encode and reference externally located podcasts and media files.
 schema_version: 5
-version: 1.16
+version: 1.17
 plugin_link: http://www.majordojo.com/projects/podcast.php
 
 settings:

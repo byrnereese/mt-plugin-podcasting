@@ -29,10 +29,12 @@ sub as_html {
     my $app = MT->instance;
     my ($param) = @_;
     my $text = '';
+    my $path = $app->{cfg}->StaticWebPath;
+    if ($path !~ /\/$/) { $path .= '/'; }
     if ($param->{'use_player'}) { 
 	$text = sprintf(
 			'<embed src="%splugins/Podcast/mp3player.swf" width="320" height="20" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=%s&height=20&width=320" />',
-			$app->{cfg}->StaticWebPath,
+			$path,
 			$asset->url,
 			);
     } else {
